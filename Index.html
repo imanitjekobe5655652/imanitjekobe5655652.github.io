@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Imani & Kobe</title>
+    <link rel="stylesheet" href="/css/indexStyle.css">
+    <link rel="shortcut icon" href="/Logo/png/logo-no-background.png" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="/Logo/png/logo-no-background.png" alt="logo" />
+            <h1>Imani & Kobe</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="/subpaginas/2021.html">2021</a></li>
+                <li><a href="/subpaginas/2022.html">2022</a></li>
+                <li><a href="/subpaginas/2023.html">2023</a></li>
+                <li><a href="/subpaginas/Brieven.html">Brieven</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Liefste Imanitje</h2>
+                <p>Welkom op deze website! <br>
+                    Hopelijk vind je hem beetje mooi, hij kan eigenlijk eindloos geupdate worden<br>
+                    Ik dacht dat het wel tof zou zijn da ge zo per jaar kon kiezen welke foto's ge wilt zien <br>
+                    en dan kan je per jaar kiezen wa je exact wil zien. <br>
+                    Kheb ook al de brieven dk ooit heb geschreven en nog heb staan er in gezet. <br>
+                    <br>
+                    Alee da ist idee op de moment heb ik alleen deze pagina gemaakt.
+                    <br>
+                    Hopelijk vindje het leuk! <br>
+                    Dikke kus, Kobe
+                </p>
+
+                <script>
+                    var date1, date2;
+                    //define two date object variables with dates inside it
+                    date1 = new Date();
+                    date2 = new Date ("Oct 22, 2021, 00:00:00");
+           
+                    //calculate total number of seconds between two dates
+                    var total_seconds = Math.abs(date2 - date1) / 1000;
+           
+                    //calculate days difference by dividing total seconds in a day
+                    var days_difference = Math.floor (total_seconds / (60 * 60 * 24));
+                    
+                    //document.write("<p>Number of days between dates from current date <br>" + 
+                    //                date1 + " and <br>" + date2 + " are: <br>" 
+                    //                + days_difference + " days</p>");
+                    document.write("<h3> Wij zijn al " + days_difference + " dagen samen</h3>");
+                 </script> 
+
+                <p class="bijschrift">Aantal dagen zouden dagelijks moeten updaten :0</p>
+
+            </section>
+
+
+            <!-- Container for the image gallery -->
+            <div class="container">
+
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="/images/Homepage-Wide/IMG_001_Wide.JPEG" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="/images/Homepage-Wide/IMG_002_Wide.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="/images/Homepage-Wide/IMG_003_Wide.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="/images/Homepage-Wide/IMG_004_Wide.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="/images/Homepage-Wide/IMG_005_Wide.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="/images/Homepage-Wide/IMG_006_Wide.JPG" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="/images/Homepage-normal/IMG_001.JPEG" style="width:100%"
+                            onclick="currentSlide(1)" alt="Pairi Daiza">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="/images/Homepage-normal/IMG_002.jpeg" style="width:100%"
+                            onclick="currentSlide(2)" alt="Samen shoppen">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="/images/Homepage-normal/IMG_003.JPG" style="width:100%"
+                            onclick="currentSlide(3)" alt="Samen op de trein">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="/images/Homepage-normal/IMG_004.JPG" style="width:100%"
+                            onclick="currentSlide(4)" alt="Thuis">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="/images/Homepage-normal/IMG_005.jpeg" style="width:100%"
+                            onclick="currentSlide(5)" alt="Proclamatie">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="/images/Homepage-normal/IMG_006.JPG" style="width:100%"
+                            onclick="currentSlide(6)" alt="Samen Zwemmen">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("demo");
+                    let captionText = document.getElementById("caption");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    captionText.innerHTML = dots[slideIndex - 1].alt;
+                }
+            </script>
+
+
+        </main>
+
+        <footer>
+            <p class="footer">Gemaakt met liefde door Kobe Sapijn voor Imani De Vos. © 2022</p>
+        </footer>
+    </div>
+</body>
+
+</html
